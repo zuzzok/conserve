@@ -1,0 +1,51 @@
+.generator-box {
+  & {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 1rem;
+  }
+}
+
+.generator-header {
+  & {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: hsl(0 0% 15%);
+    border-radius: var(--outer-radius);
+    border: none;
+  }
+
+  & > .password {
+    width: 100%;
+    font-size: 1.3rem;
+    background-color: transparent;
+    color: var(--clr-neutral-l);
+    text-overflow: ellipsis;
+    border: none;
+  }
+
+  & > .icon > * {
+    font-size: 1.15rem;
+    transition: 0.1s ease-in scale, 0.2s ease-in rotate, 0.2s ease-in color;
+  }
+
+  & > .icon:is(:hover, :focus) > * {
+    color: var(--clr-accent-l);
+    rotate: -10deg;
+    scale: 1.15;
+  }
+}
+
+.generator-body {
+  & {
+    width: 100%;
+    padding: 1rem;
+    background-color: hsl(0 0% 15%);
+    border-radius: var(--outer-radius);
+  }
+}
