@@ -1,0 +1,22 @@
+.button-box {
+  & {
+    font-family: "Jost";
+    border: none;
+    border-radius: var(--inner-radius);
+    background-color: var(--clr-accent-n);
+    padding-block: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: var(--fw-medium);
+    line-height: 1;
+    text-transform: uppercase;
+    color: var(--clr-bg-n);
+    width: 100%;
+    transition: 0.2s ease-in background-color, 0.2s ease-in scale;
+  }
+
+  &:where(:hover, :focus) {
+    scale: 1.01;
+    background-color: var(--clr-accent-lt);
+  }
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,58 +8,63 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon" />
     <!-- Boxicons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <!-- Reset Styles -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reseter.css" />
     <!-- Own Styles -->
     <link rel="stylesheet" href="./css/main.css" />
     <!-- Own Scripts -->
-    <script src="./scripts/main.js" defer></script>
+    <script src="./scripts/main.js" type="module" defer></script>
 
     <title>Conserve</title>
   </head>
 
   <body>
-
     <div class="generator-box -container">
+      <div class="theme-switcher" data-js-theme-switcher>
+        <i class="icon bx bx-sun"></i>
+      </div>
+
       <div class="generator-header">
-        <input class="password" type="text" value="485asAHÑ&#264sPm" disabled>
-        <div class="icon -tooltip -right" data-text="Copiar contraseña al portapapeles" tabindex="0">
-          <i class='bx bx-copy-alt'></i>
+        <input class="password" type="text" value="zCh1797bm4dbm1KJWaPYiO1h#50#@F$ihQmL#7@STGJft8#sL*" disabled data-js-password />
+        <div class="icon -tooltip -right" data-text="Copiar contraseña al portapapeles" tabindex="0" data-js-copy-password>
+          <i class="bx bx-copy-alt"></i>
         </div>
       </div>
 
       <div class="generator-body">
-        <label class="label" for="longitud">Longitud</label>
-        <div class="input-group">
-          <input class="range" type="range" value="0" min="0" max="15" step="1" id="longitud" tabindex="0">
+        <div class="input-group -column">
+          <label class="label-box" for="longitud">Longitud</label>
+          <input class="range-box" type="range" value="0" min="1" max="50" step="1" id="longitud" tabindex="0" />
+          <span class="range-value">0</span>
         </div>
-        
-        <div class="input-group">
-          <input class="checkbox" type="checkbox" id="minusculas">
-          <label class="label" for="minusculas">Minusculas (a-z)</label>
+
+        <div class="generator-options">
+          <div class="input-group">
+            <input class="check-box bx bx-checkbox" type="checkbox" id="minusculas" checked />
+            <label class="label-box" for="minusculas">Utilizar Minusculas</label>
+          </div>
+
+          <div class="input-group">
+            <input class="check-box bx bx-checkbox" type="checkbox" id="mayusculas" checked />
+            <label class="label-box" for="mayusculas">Utilizar Mayusculas</label>
+          </div>
+
+          <div class="input-group">
+            <input class="check-box bx bx-checkbox" type="checkbox" id="simbolos" />
+            <label class="label-box" for="simbolos">Utilizar Simbolos</label>
+          </div>
+
+          <div class="input-group">
+            <input class="check-box bx bx-checkbox" type="checkbox" id="numeros" checked />
+            <label class="label-box" for="numeros">Utilizar Numeros</label>
+          </div>
         </div>
 
         <div class="input-group">
-          <input class="checkbox" type="checkbox" id="mayusculas">
-          <label class="label" for="mayusculas">Mayusculas (A-Z)</label>
-        </div>
-        
-        <div class="input-group">
-          <input class="checkbox" type="checkbox" id="simbolos">
-          <label class="label" for="simbolos">Simbolos (!-$^+)</label>
-        </div>
-        
-        <div class="input-group">
-          <input class="checkbox" type="checkbox" id="numeros">
-          <label class="label" for="numeros">Numeros (0-9)</label>
-        </div>
-
-        <div class="input-group">
-          <button class="button">Generar</button>
+          <button class="button-box" data-js-generate-button="">Generar</button>
         </div>
       </div>
     </div>
-
   </body>
 </html>

@@ -1,6 +1,6 @@
 .container,
 .-container {
   --max-width: 20rem;
-  width: min(100% - 2rem, var(--max-width, 20rem));
+  width: min(100% - 2rem, var(--max-width, 987px));
   margin-inline: auto;
 }

@@ -1,0 +1,6 @@
+.label-box {
+  & {
+    width: 100%;
+    text-overflow: ellipsis;
+  }
+}

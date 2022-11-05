@@ -1,15 +1,12 @@
 .-tooltip[data-text]:not([data-text=""]) {
   position: relative;
-  --tooltip-bg: hsl(0 0% 30%);
-  --tooltip-fg: hsl(0 0% 95%);
+  --tooltip-bg: var(--clr-bg-lt);
+  --tooltip-fg: var(--clr-fg-n);
 }
 
-/* ------------------------------------------------------ */
-/*                         Center                         */
-/* ------------------------------------------------------ */
-
-.-tooltip[data-text]:not([data-text=""]):is(:hover, :focus)::before {
+.-tooltip[data-text]:not([data-text=""]):where(:hover, :focus)::before {
   content: attr(data-text);
+  filter: drop-shadow(0px 0px 0.2rem var(--drop-shadow));
   position: absolute;
   background-color: var(--tooltip-bg);
   color: var(--tooltip-fg);
@@ -23,8 +20,9 @@
   z-index: 10;
 }
 
-.-tooltip[data-text]:not([data-text=""]):is(:hover, :focus)::after {
+.-tooltip[data-text]:not([data-text=""]):where(:hover, :focus)::after {
   content: "";
+  filter: drop-shadow(0 0.1rem 0.2rem var(--drop-shadow));
   position: absolute;
   border-width: 0.4rem;
   border-style: solid;
@@ -42,13 +40,13 @@
 /*                          Left                          */
 /* ------------------------------------------------------ */
 
-.-tooltip.-left[data-text]:not([data-text=""]):is(:hover, :focus)::before {
+.-tooltip.-left[data-text]:not([data-text=""]):where(:hover, :focus)::before {
   content: attr(data-text);
   left: 0;
   translate: 0;
 }
 
-.-tooltip.-left[data-text]:not([data-text=""]):is(:hover, :focus)::after {
+.-tooltip.-left[data-text]:not([data-text=""]):where(:hover, :focus)::after {
   left: 0.3rem;
   translate: 0;
 }
@@ -57,13 +55,13 @@
 /*                         Right                          */
 /* ------------------------------------------------------ */
 
-.-tooltip.-right[data-text]:not([data-text=""]):is(:hover, :focus)::before {
+.-tooltip.-right[data-text]:not([data-text=""]):where(:hover, :focus)::before {
   content: attr(data-text);
   left: 100%;
   translate: -100%;
 }
 
-.-tooltip.-right[data-text]:not([data-text=""]):is(:hover, :focus)::after {
+.-tooltip.-right[data-text]:not([data-text=""]):where(:hover, :focus)::after {
   left: 0;
   translate: 0;
 }

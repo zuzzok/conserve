@@ -14,17 +14,18 @@
     width: 100%;
     display: flex;
     align-items: center;
+    gap: 0.5rem;
     padding: 1rem;
-    background-color: hsl(0 0% 15%);
+    background-color: var(--clr-bg-n);
     border-radius: var(--outer-radius);
     border: none;
   }
 
   & > .password {
     width: 100%;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     background-color: transparent;
-    color: var(--clr-neutral-l);
+    color: var(--clr-fg-n);
     text-overflow: ellipsis;
     border: none;
   }
@@ -45,7 +46,26 @@
   & {
     width: 100%;
     padding: 1rem;
-    background-color: hsl(0 0% 15%);
+    background-color: var(--clr-bg-n);
     border-radius: var(--outer-radius);
+  }
+}
+
+.theme-switcher {
+  & {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+
+  & > .icon {
+    font-size: 1.3rem;
+    transition: 0.1s ease-in scale, 0.2s ease-in rotate, 0.2s ease-in color;
+  }
+
+  & > .icon:where(:hover) {
+    color: var(--clr-accent-n);
+    rotate: -10deg;
+    scale: 1.15;
   }
 }
