@@ -20,51 +20,53 @@
   </head>
 
   <body>
-    <div class="generator-box -container">
-      <div class="theme-switcher" data-js-theme-switcher>
-        <i class="icon bx bx-sun"></i>
-      </div>
+    <main>
+      <div class="generator-box -container">
+        <div class="theme-switcher" data-js-theme-switcher tabindex="0" aria-label="Cambiar tema">
+          <i class="icon bx bx-sun"></i>
+        </div>
 
-      <div class="generator-header">
-        <input class="password" type="text" value="zCh1797bm4dbm1KJWaPYiO1h#50#@F$ihQmL#7@STGJft8#sL*" disabled data-js-password />
-        <div class="icon -tooltip -right" data-text="Copiar contraseña al portapapeles" tabindex="0" data-js-copy-password>
-          <i class="bx bx-copy-alt"></i>
+        <div class="generator-header">
+          <input class="password" type="text" value="zCh1797b" placeholder="Selecciona alguna opción..." disabled data-js-password />
+          <div class="icon -tooltip -right" data-text="Copiar contraseña al portapapeles" tabindex="0" data-js-copy-password aria-label="Copiar contraseña la portapapeles">
+            <i class="bx bx-copy-alt"></i>
+          </div>
+          <div class="strenght-indicator" data-js-strenght-indicator="weak"></div>
+        </div>
+
+        <div class="generator-body">
+          <div class="input-group -column">
+            <label class="label-box" for="longitud">Longitud</label>
+            <input class="range-box" type="range" value="8" min="1" max="25" step="1" id="longitud" tabindex="0" data-js-lenght-slider />
+          </div>
+
+          <div class="generator-options">
+            <div class="input-group">
+              <input class="check-box bx bx-checkbox" type="checkbox" id="minusculas" checked />
+              <label class="label-box" for="minusculas">Utilizar Minusculas</label>
+            </div>
+
+            <div class="input-group">
+              <input class="check-box bx bx-checkbox" type="checkbox" id="mayusculas" checked />
+              <label class="label-box" for="mayusculas">Utilizar Mayusculas</label>
+            </div>
+
+            <div class="input-group">
+              <input class="check-box bx bx-checkbox" type="checkbox" id="simbolos" checked />
+              <label class="label-box" for="simbolos">Utilizar Simbolos</label>
+            </div>
+
+            <div class="input-group">
+              <input class="check-box bx bx-checkbox" type="checkbox" id="numeros" checked />
+              <label class="label-box" for="numeros">Utilizar Numeros</label>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <button class="button-box" data-js-generate-button="">Generar</button>
+          </div>
         </div>
       </div>
-
-      <div class="generator-body">
-        <div class="input-group -column">
-          <label class="label-box" for="longitud">Longitud</label>
-          <input class="range-box" type="range" value="0" min="1" max="50" step="1" id="longitud" tabindex="0" />
-          <span class="range-value">0</span>
-        </div>
-
-        <div class="generator-options">
-          <div class="input-group">
-            <input class="check-box bx bx-checkbox" type="checkbox" id="minusculas" checked />
-            <label class="label-box" for="minusculas">Utilizar Minusculas</label>
-          </div>
-
-          <div class="input-group">
-            <input class="check-box bx bx-checkbox" type="checkbox" id="mayusculas" checked />
-            <label class="label-box" for="mayusculas">Utilizar Mayusculas</label>
-          </div>
-
-          <div class="input-group">
-            <input class="check-box bx bx-checkbox" type="checkbox" id="simbolos" />
-            <label class="label-box" for="simbolos">Utilizar Simbolos</label>
-          </div>
-
-          <div class="input-group">
-            <input class="check-box bx bx-checkbox" type="checkbox" id="numeros" checked />
-            <label class="label-box" for="numeros">Utilizar Numeros</label>
-          </div>
-        </div>
-
-        <div class="input-group">
-          <button class="button-box" data-js-generate-button="">Generar</button>
-        </div>
-      </div>
-    </div>
+    </main>
   </body>
 </html>

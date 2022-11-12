@@ -5,6 +5,10 @@
     transition: 0.2s ease-in scale;
   }
 
+  &:where(:active) {
+    translate: 0 0.1rem;
+  }
+
   &:where(:focus, :hover) {
     scale: 1.15;
   }

@@ -1,7 +1,7 @@
 {
-  "name": "password-generator",
+  "name": "frontend-conserve",
   "version": "1.0.0",
-  "description": "A simple password manager application",
+  "description": "A simple password generator web application",
   "license": "MIT",
   "author": "Gino Canestrari",
   "main": "./src/index.html",
@@ -30,5 +30,13 @@
     "onchange": "7.1.0",
     "postcss-cli": "9.1.0",
     "sass": "1.49.8"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gino-canestrari/frontend-conserve.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gino-canestrari/frontend-conserve/issues"
+  },
+  "homepage": "https://github.com/gino-canestrari/frontend-conserve#readme"
 }

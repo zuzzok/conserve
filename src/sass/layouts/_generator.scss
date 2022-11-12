@@ -14,7 +14,10 @@
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+    row-gap: 0.8rem;
     padding: 1rem;
     background-color: var(--clr-bg-n);
     border-radius: var(--outer-radius);
@@ -22,11 +25,11 @@
   }
 
   & > .password {
-    width: 100%;
     font-size: 1.1rem;
     background-color: transparent;
     color: var(--clr-fg-n);
     text-overflow: ellipsis;
+    flex-grow: 1;
     border: none;
   }
 
@@ -35,10 +38,46 @@
     transition: 0.1s ease-in scale, 0.2s ease-in rotate, 0.2s ease-in color;
   }
 
+  & > .icon:where(:active) > * {
+    translate: 0 0.1rem;
+  }
+
   & > .icon:is(:hover, :focus) > * {
     color: var(--clr-accent-l);
     rotate: -10deg;
     scale: 1.15;
+  }
+
+  & > .strenght-indicator {
+    position: relative;
+    width: 100%;
+    height: 4px;
+    border-radius: var(--inner-radius);
+    background-color: var(--clr-bg-lt);
+    flex-grow: 1;
+  }
+
+  & > .strenght-indicator::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    transition: width ease 0.3s;
+  }
+
+  & > .strenght-indicator[data-js-strenght-indicator="weak"]::before {
+    width: 30%;
+    background-color: hsl(0, 45%, 65%);
+  }
+
+  & > .strenght-indicator[data-js-strenght-indicator="medium"]::before {
+    width: 60%;
+    background-color: hsl(50, 45%, 65%);
+  }
+
+  & > .strenght-indicator[data-js-strenght-indicator="strong"]::before {
+    width: 100%;
+    background-color: var(--clr-accent-n);
   }
 }
 
@@ -56,16 +95,20 @@
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
+    transition: 0.1s ease-in scale, 0.2s ease-in rotate, 0.2s ease-in color;
+  }
+
+  &:where(:hover, :focus) {
+    color: var(--clr-accent-n);
+    rotate: -10deg;
+    scale: 1.15;
+  }
+
+  &:where(:active) {
+    translate: 0 0.1rem;
   }
 
   & > .icon {
     font-size: 1.3rem;
-    transition: 0.1s ease-in scale, 0.2s ease-in rotate, 0.2s ease-in color;
-  }
-
-  & > .icon:where(:hover) {
-    color: var(--clr-accent-n);
-    rotate: -10deg;
-    scale: 1.15;
   }
 }
