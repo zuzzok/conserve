@@ -9,7 +9,7 @@
     translate: 0 0.1rem;
   }
 
-  &:where(:focus, :hover) {
+  &:where(:hover, :focus-visible) {
     scale: 1.15;
   }
 

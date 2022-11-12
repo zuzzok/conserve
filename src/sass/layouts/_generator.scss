@@ -22,6 +22,16 @@
     background-color: var(--clr-bg-n);
     border-radius: var(--outer-radius);
     border: none;
+    transition: outline 0.1s ease, box-shadow 0.05s ease, rotate 0.05s ease;
+  }
+
+  &:has(.icon:where(:hover, :focus-visible)) {
+    outline: solid 3px var(--clr-accent-n);
+  }
+
+  &:has(.icon:where(:active)) {
+    box-shadow: 0 0 10px 2px var(--clr-accent-n);
+    rotate: 2deg;
   }
 
   & > .password {
@@ -42,7 +52,7 @@
     translate: 0 0.1rem;
   }
 
-  & > .icon:is(:hover, :focus) > * {
+  & > .icon:is(:hover, :focus-visible) > * {
     color: var(--clr-accent-l);
     rotate: -10deg;
     scale: 1.15;
@@ -99,7 +109,7 @@
     transition: 0.1s ease-in scale, 0.2s ease-in rotate, 0.2s ease-in color;
   }
 
-  &:where(:hover, :focus) {
+  &:where(:hover, :focus-visible) {
     color: var(--clr-accent-n);
     rotate: -10deg;
     scale: 1.15;

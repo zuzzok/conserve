@@ -19,7 +19,7 @@
     translate: 0 0.1rem;
   }
 
-  &:where(:hover, :focus) {
+  &:where(:hover, :focus-visible) {
     scale: 1.01;
     background-color: var(--clr-accent-lt);
   }
