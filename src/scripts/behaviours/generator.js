@@ -5,14 +5,14 @@ const lenghtSlider = document.querySelector('[data-js-lenght-slider]');
 const passwordInput = document.querySelector('[data-js-password]');
 
 const generatePassword = (length) => {
-  
+
   let charset = '';
 
   const minusculas = document.getElementById('minusculas')
   const mayusculas = document.getElementById('mayusculas')
   const simbolos = document.getElementById('simbolos')
   const numeros = document.getElementById('numeros')
-  
+
   if (minusculas.checked) charset += 'abcdefghijklmnñopqrstuvwxyz';
   if (mayusculas.checked) charset += 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
   if (simbolos.checked) charset += '!#$%&/()=?¡^*_';
@@ -27,7 +27,7 @@ const generatePassword = (length) => {
       let randomNumber = crypto.getRandomValues(new Uint32Array(1))[0];
       randomNumber = randomNumber / 0x100000000;
       randomNumber = Math.floor(randomNumber * charset.length);
-  
+
       password += charset[randomNumber];
     }
   }
@@ -46,6 +46,11 @@ const changeStrenghtIndicator = (lenght) => {
 }
 
 generateButton.addEventListener('click', (event) => {
+  const length = Number(document.getElementById('longitud').value)
+  passwordInput.value = generatePassword(length)
+})
+
+document.addEventListener("DOMContentLoaded", (event) => {
   const length = Number(document.getElementById('longitud').value)
   passwordInput.value = generatePassword(length)
 })
